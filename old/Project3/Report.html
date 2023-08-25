@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Team 7 - Project 3</title>
+    <style>
+        body{
+            background-color: #4A154B;
+            color: #dde1f1;
+            font-family: Ubuntu, Arial, sans-serif;
+            padding-right: 200px;
+            padding-left: 200px;
+        }
+        p{
+            text-indent: 40px;
+        }
+        h1{
+            font-family: Ubuntu, Arial, sans-serif;
+        }
+        th {
+            background-color: #A7ACD9;
+        }
+        table{
+            margin-left:auto;
+            margin-right:auto;
+            width:100%;
+        }
+        caption{
+            color: #dde1f1;
+        }
+        * {
+            /*CSS transitions*/
+            -o-transition-property: none !important;
+            -moz-transition-property: none !important;
+            -webkit-transition-property: none !important;
+            transition-property: none !important;
+            /*CSS transforms*/
+            -ms-transform: none !important;
+            transform: none !important;
+            /*CSS animations*/
+            -webkit-animation: none !important;
+            -moz-animation: none !important;
+            -o-animation: none !important;
+            animation: none !important;
+        }
+        /*.bottom_right{*/
+        /*    position: absolute;*/
+        /*    right: 0px;*/
+        /*}*/
+        #slackers {
+            width: 300px;
+            height: 125px;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align: center;">Team 7 - Project 3 Report</h1>
+<h3 style="text-align: center;">Submitted by: Joseff Ribble</h3>
+<div id = "logo"><img id = "slackers" src = ../Project2/slackers.png alt="Slackers Logo"/></div>
+<h1>Header Table</h1>
+<table>
+    <tr>
+        <th style="background-color: #36C5F0">Name</th>
+        <th style="background-color: #2EB67D">CWID</th>
+        <th style="background-color: #E01E5A">Email</th>
+        <th style="background-color: #ECB22E">Hours</th>
+    </tr>
+    <tr>
+        <td>Matthew Stewart</td>
+        <td>12106320</td>
+        <td>mrstewart11@crimson.ua.edu</td>
+        <td>9</td>
+    </tr>
+    <tr>
+        <td>Dylan Brearley</td>
+        <td>11933934</td>
+        <td>dhbrearley@crimson.ua.edu</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>Gabrielle Karabas</td>
+        <td>12151020</td>
+        <td>ggkarabas@crimson.ua.edu</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>Sonam Lama</td>
+        <td>12176519</td>
+        <td>slama@crimson.ua.edu</td>
+        <td>9</td>
+    </tr>
+    <tr>
+        <td>Joseff Ribble</td>
+        <td>12197128</td>
+        <td>jcribble@crimson.ua.edu</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>Avery Fernandez</td>
+        <td>12193941</td>
+        <td>amfernandez7@crimson.ua.edu</td>
+        <td>6</td>
+    </tr>
+</table>
+<h1>Task Distribution Table</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Tasks</th>
+        <th>Percentage</th>
+    </tr>
+    <!-- Each row after is an individual -->
+    <tr>
+        <td>Avery Fernandez</td>
+        <td>
+            Sequence Diagrams
+        </td>
+        <td>15%</td>
+    </tr>
+    <tr>
+        <td>Gabrielle Karabas</td>
+        <td>
+            Coupling & Cohesion Analysis Paragraph
+        </td>
+        <td>10%</td>
+    </tr>
+    <tr>
+        <td>Joseff Ribble</td>
+        <td>
+            Header Table, Task Distribution Table, Bitbucket Statistics, Final report
+        </td>
+        <td>5%</td>
+    </tr>
+    <tr>
+        <td>Sonam Lama</td>
+        <td>
+            Sequence Diagrams and Main Class Diagram (Revision)
+        </td>
+        <td>20%</td>
+    </tr>
+    <tr>
+        <td>Dylan Brearley</td>
+        <td>
+            Main Class Diagram, Sequence Diagram
+        </td>
+        <td>30%</td>
+    </tr>
+    <tr>
+        <td>Matthew Stewart</td>
+        <td>
+            Sequence Diagrams and Main Class Diagram (Revision)
+        </td>
+        <td>20%</td>
+    </tr>
+</table>
+<br> <br>
+<h1 style="text-align: center;">Analysis</h1>
+<p>For a program design to be effective, it must incorporate the idea of high cohesion and low coupling. By referencing the main class diagram that can be found in the Report.html file, the classes designed for our project have the attributes of high cohesion and minimal instances of coupling. The ChocAnDataCenter class is an example of a class with high cohesion. The elements within this class are effectively related to each other and work closely together. Moreover, within our team’s design, the overall amount of unnecessary coupling has been kept to a negligible amount. Though classes such as Manager and ManagerTerminal are dependent on each other due to the exchange of information, the overall design of classes maintains minimal interdependence. As we have included abstract classes like ProviderTerminal and OperatorTerminal for lower level (concrete) classes like ChocAnDataCenter class, our design also implements the idea of Dependency Inversion Principle (DIP), which makes maintenance and reusability convenient as any changes in concrete classes won’t change the abstract classes the user interacts with. </p>
+<br> <br>
+<h1 style="text-align: center;">1: Main Class Diagram</h1>
+<img src="p3images/mainclassdiagram.png" alt="Class Diagram" style="width:1100px;">
+<br><br><br>
+<h1 style="text-align: center;">2: Sequence Diagrams:</h1>
+<br>
+<h1 style="text-align: center;">Bill Service</h1>
+<img src="p3images/bill_chocAn_new.png" alt="" style="width:1100px;">
+<br>
+<h1 style="text-align: center;">Generate Reports</h1>
+<img src="p3images/NewGenerateReport.png" alt="" style="width:1100px;">
+<br>
+<h1 style="text-align: center;">Manage Member</h1>
+<img src="p3images/managemember_new.png" alt="" style="width:1100px;">
+<br>
+<h1 style="text-align: center;">Manage Provider</h1>
+<img src="p3images/manageprovider_new.png" alt="" style="width:1100px;">
+<br>
+<h1 style="text-align: center;">Use Provider Directory</h1>
+<img src="p3images/Use_Provider_Directory_new.png" alt="" style="width:1100px;">
+<br>
+<h1 style="text-align: center;">Verify Manager</h1>
+<img src="p3images/Verify_Manager_new.png" alt="" style="width:500px;">
+<br>
+<h1 style="text-align: center;">Verify Operator</h1>
+<img src="p3images/Verify_operator_new.png" alt="" style="width:500px;">
+<br>
+<h1 style="text-align: center;">Verify Provider</h1>
+<img src="p3images/verify_provider_class.png" alt="" style="width:500px;">
+<br>
+<h1 style="text-align: center;">Weekly Schedule</h1>
+<img src="p3images/weekly_schedule.png" alt="" style="width:700px;">
+<br>
+
+<h1 style="text-align: center;">Bitbucket Stats</h1>
+<img src="p3images/bitbucketStats.png" alt="" style="width:1000px;">
+
+</body>
+</html>

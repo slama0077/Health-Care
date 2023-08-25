@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="matthewstyles.css">
+    <title>Matthew Stewart - Team 7 - CS 200</title>
+</head>
+<body>
+<div id = "logo">
+    <img id = "slackers" style="width: 100%;" src = p2images/slackers.png />
+</div>
+<h1 style="text-align: center;">Matthew Stewart - Team 7 - Project 2 - CS 200</h1>
+<div id="header_table"></div>
+<br/>
+<br/>
+<div id="task_table"></div>
+
+<table style="width:100%">
+    <tr>
+        <th>Name</th>
+        <th>CWID</th>
+        <th>Email</th>
+        <th>Hours</th>
+    </tr>
+    <tr>
+        <td>Matthew Stewart</td>
+        <td>12106320</td>
+        <td>mrstewart11@crimson.ua.edu</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>Dylan Brearley</td>
+        <td>11933934</td>
+        <td>dhbrearley@crimson.ua.edu</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>Gabrielle Karabas</td>
+        <td>12151020</td>
+        <td>ggkarabas@crimson.ua.edu</td>
+        <td>9</td>
+    </tr>
+    <tr>
+        <td>Sonam Lama</td>
+        <td>12176519</td>
+        <td>slama@crimson.ua.edu</td>
+        <td>11</td>
+    </tr>
+    <tr>
+        <td>Joseff Ribble</td>
+        <td>12176519</td>
+        <td>jcribble@crimson.ua.edu</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>Avery Fernandez</td>
+        <td>12193941</td>
+        <td>amfernandez7@crimson.ua.edu</td>
+        <td>9</td>
+    </tr>
+  </table>
+  <br> <br>
+<h2 style="background-color:powderblue;">Task Distribution Table</h2>
+<table>
+ <tr>
+            <th>Name</th>
+            <th>Tasks</th>
+            <th>Percentage</th>
+        </tr>
+        <tr>
+            <td>Avery Fernandez</td>
+            <td>
+                Sequence Diagrams
+            </td>
+            <td>15%</td>
+        </tr>
+        <tr>
+            <td>Gabrielle Karabas</td>
+            <td>
+                Coupling & Cohesion Analysis Paragraph
+            </td>
+            <td>10%</td>
+        </tr>
+        <tr>
+            <td>Joseff Ribble</td>
+            <td>
+                Header Table, Task Distribution Table, Bitbucket Statistics, Final report
+            </td>
+            <td>5%</td>
+        </tr>
+        <tr>
+            <td>Sonam Lama</td>
+            <td>
+                Sequence Diagrams and Main Class Diagram (Revision)
+            </td>
+            <td>20%</td>
+        </tr>
+        <tr>
+            <td>Dylan Brearley</td>
+            <td>
+                Main Class Diagram
+            </td>
+            <td>30%</td>
+        </tr>
+        <tr>
+            <td>Matthew Stewart</td>
+            <td>
+                Sequence Diagrams and Main Class Diagram (Revision)
+            </td>
+            <td>20%</td>
+        </tr>
+    </table>
+    <br> <br>
+<!-- change src to your image -->
+<h1 style="text-align: center;">Class Diagram</h1>
+<img height = 500px width = 50px src="p3images/matthewclassdiagram.png" alt="UML CLASS"/>
+
+</body>
+<script>
+    fetch('header.html')
+    .then(response => response.text())
+    .then(html => {
+        document.getElementById('header_table').innerHTML = html;
+    });
+    fetch('task.html')
+    .then(response => response.text())
+    .then(html => {
+        document.getElementById('task_table').innerHTML = html;
+    });
+</script>
+</html>

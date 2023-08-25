@@ -1,0 +1,13 @@
+Task 1 Assumptions:
+
+ChocAnDataCenter class is responsible for managing and processing all information related to members, providers, services, and provided services.
+All the data in ChocAnDataCenter is stored in lists, as we don't have any database connection in this project.
+Each member report, provider report, and the provider directory will be generated as a string, which can be later written to a file or sent via email.
+The billing process is simplified, and we only need to handle storing the billing information in the providedServices list.
+The fees are not associated directly with the provider or member classes, as they are part of the services provided.
+
+Task 3 Description:
+
+The ChocAn system design exhibits high cohesion and low coupling, making it a strong foundation for a maintainable and scalable implementation. Cohesion is achieved through focused classes with specific responsibilities, such as Member, Provider, Service, and ProvidedService. The ChocAnDataCenter class acts as a centralized component responsible for managing and processing data related to these entities.
+Low coupling is accomplished by minimizing dependencies between classes. The ChocAnDataCenter serves as a mediator, managing relationships between classes and their corresponding data, thus reducing interdependencies and promoting maintainability and extensibility.
+In conclusion, this design is effective due to its high cohesion and low coupling, which are key factors in ensuring a robust system. By having purposeful classes and minimizing dependencies, the design lays a strong foundation for the ChocAn system's implementation.

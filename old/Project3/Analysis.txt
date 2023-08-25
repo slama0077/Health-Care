@@ -1,0 +1,7 @@
+For a program design to be effective, it must incorporate the idea of high cohesion and low coupling.  
+By referencing the main class diagram that can be found in the Report.html file, the classes designed for our project have the attributes of high cohesion and minimal instances of coupling. 
+The ChocAnDataCenter class is an example of a class with high cohesion. 
+The elements within this class are effectively related to each other and work closely together. 
+Moreover, within our team’s design, the overall amount of unnecessary coupling has been kept to a negligible amount. 
+Though classes such as Manager and ManagerTerminal are dependent on each other due to the exchange of information, the overall design of classes maintains minimal interdependence. 
+As we have included abstract classes like ProviderTerminal and OperatorTerminal for lower level (concrete) classes like ChocAnDataCenter class, our design also implements the idea of Dependency Inversion Principle (DIP), which makes maintenance and reusability convenient as any changes in concrete classes won’t change the abstract classes the user interacts with. 

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Team 7 Project 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+<section class="header">
+    <divc class="title-wrapper">
+        <div class="sweet-title">
+            <span data-text="Team 7">Team 7</span>
+            <span data-text="Project 1">Project 1</span>
+            
+        </div>
+    </divc>
+</section>
+<br>
+<div id="header_table"></div>
+<br/>
+<br/>
+<div id="task_table"></div>
+
+<div class="short paragragh">
+	<h1 class="large rise" style="text-align: center;">Short Paragraph</h1>
+
+	<p>	   For this project, there were not many assumptions to be made given that Appendix A of the Chocoholics Anonymous document clearly laid out the tasks associated with each actor in the UML diagram. That being said, based on the UML diagram that our team produced, there is the assumption that each actor is familiar and capable of utilizing their individual terminal, and that no additional steps will be necessary to use the terminal. The tasks associated with Project 1 involved creating a UML diagram based on the interactions between the ChocAn software and the four actors who access the software. As a team, we determined the four actors to be the provider, automatic server, manager, and operator. The UML diagram, titled Joseff_UML, depicts the provider utilizing the software via the provider terminal. From the provider terminal, the provider will update and create new provider and member files. In order to create a member file, the provider must input both the member and provider information. It is important to note that in order to create a new member profile the software must first verify that the account is valid. If the account is invalid or suspended, no further interaction with the member profile can be achieved. Once that task has been completed, the provider will add the service the member is utilizing by using the associated service code. The second actor is the automatic server. The automatic server receives a weekly scheduled report, which is a task that the manager completes by using the manager terminal. These reports include a compilation of both the member and provider files. Lastly, there is the operator. The operator employs the operator terminal in order to add, remove, and update both member and provider files. The weekly provider file contains information regarding the provider, such as the name, account number, street address, etc. The same information is also included in the member file. The notable difference between the provider and member file is that the provider file includes not only the provider's information, but also the member’s information. The provider file also has payment information in regard to the fee that must be paid, and the total fee for the week. This information is not present in the member file.</p>
+</div>
+
+
+<h1 class="large rise" style="text-align: center;">Use Cases</h1>
+
+<div class="use_cases">
+	<p><strong>Use case</strong>: Update/Create Provider File</p>
+	<p><strong>Context</strong>: Creates the weekly provider file</p>
+	<p><strong>Actors</strong>: Provider</p>
+	<p><strong>Main Success Scenario</strong>:</p>
+	<ol>
+	<li>Provider opens up a terminal</li>
+	<li>Provider enters provider number</li>
+	<li>Selects either update provider file or create provider file</li>
+	<li>New file is returned to the provider</li>
+	</ol>
+	<p><strong>Extensions</strong>:</p>
+	<ol>
+	<li>Provider enters wrong provider number and an error pops up asking to re-enter code</li>
+	</ol>
+	<hr>
+	<p><strong>Use case</strong>: Access Service Code</p>
+	<p><strong>Context</strong>: Provider asks for service code directory</p>
+	<p><strong>Actors</strong>: Provider</p>
+	<p><strong>Main Success Scenario</strong>:</p>
+	<ol>
+	<li>Provider opens up a terminal</li>
+	<li>Provider enters provider number</li>
+	<li>Provider then chooses for provider directory</li>
+	<li>Provider directory is returned to the provider</li>
+	</ol>
+	<p><strong>Extensions</strong>:</p>
+	<ol>
+	<li>Provider enters wrong provider number and an error pops up asking to re-enter code</li>
+	</ol>
+	<hr>
+	<p><strong>Use case</strong>: Weekly Schedule</p>
+	<p><strong>Context</strong>: The automatic server / main accounting procedure runs generating the weekly reports for member and provider files</p>
+	<p><strong>Actors</strong>: Automatic Server</p>
+	<p><strong>Main Success Scenario</strong>:</p>
+	<ol>
+	<li>The end of the week comes around</li>
+	<li>Automatic Server triggers weekly operation</li>
+	<li>A report is generated for both member and provider files</li>
+	</ol>
+	<p><strong>Extensions</strong>:</p>
+	<p>N/A</p>
+	<hr>
+	<p><strong>Use case</strong>: Add Service</p>
+	<p><strong>Context</strong>: Provider adds service to member&#39;s account</p>
+	<p><strong>Actors</strong>: Provider, Member</p>
+	<p><strong>Main Success Scenario</strong>:</p>
+	<ol>
+	<li>Provider opens up a terminal</li>
+	<li>Provider enters provider number</li>
+	<li>Provider enters member number</li>
+	<li>Provider then chooses to add the service and enters the service code</li>
+	<li>Provider must confirm service and then the service is added to the member file and weekly provider file</li>
+	</ol>
+	<p><strong>Extensions</strong>:</p>
+	<ol>
+	<li>Provider enters wrong provider number and an error pops up asking to re-enter code</li>
+	<li>Provider enters wrong member number and Invalid Number appears on the terminal screen</li>
+	<li>Provider enters the member number and the member account is suspended due to fees</li>
+	<li>Provider enters invalid service code</li>
+	<li>Provider doesn&#39;t confirm service and operation ends</li>
+	</ol>
+	<hr>
+	<p><strong>Use case</strong>: Generate Reports</p>
+	<p><strong>Context</strong>: The manager generates reports for member and provider files</p>
+	<p><strong>Actors</strong>: Manager</p>
+	<p><strong>Main Success Scenario</strong>:</p>
+	<ol>
+	<li>Manager opens up a terminal</li>
+	<li>Manager then chooses to generate reports</li>
+	<li>A report is generated for both member and provider files</li>
+	</ol>
+	<p><strong>Extensions</strong>:</p>
+	<p>N/A</p>
+	<hr>
+	<p><strong>Use case</strong>: Update file changes</p>
+	<p><strong>Context</strong>: The Operator at any time can choose to add remove or update the provider and member files</p>
+	<p><strong>Actors</strong>: Operator</p>
+	<p><strong>Main Success Scenario</strong>:</p>
+	<ol>
+	<li>Operator opens up a terminal</li>
+	<li>Operator then chooses to add/remove/update files</li>
+	<li>Provider and member files are updated based on choices</li>
+	</ol>
+	<p><strong>Extensions</strong>:</p>
+	<p>N/A</p>
+
+</div>
+
+<div class="glossary_data">
+	<h1 id="glossary-" class="large rise" style="text-align: center;">Glossary:</h1>
+	<ul>
+	<li>ChocAn: Chocoholics Anonymous</li>
+	<li>Member: User of ChocAn, will have a member card</li>
+	<li>Provider: Health care professionals that work with/for ChocAn and provide service to members, including dietitians, internists, and exercise experts</li>
+	<li>Member Number: A nine-digit number that is specific to each member</li>
+	<li>Member Card: Plastic card that contains the member&#39;s name and their member number</li>
+	<li>Terminal: Computer terminal that is responsible for connecting the provider to the ChocAn data center</li>
+	<li>Provider number: A number that is specific to each provider</li>
+	<li>Services: Health care services that are provided by ChocAn</li>
+	<li>Card Reader: A card scanner built into the terminal that scans the member card</li>
+	<li>Data Center: ChocAn data center that controls all backend operations</li>
+	<li>Monthly Fees: Monthly ChocAn membership fee</li>
+	<li>Service Date: Date the services were provided, in the format MM-DD-YYYY</li>
+	<li>Service Code: a six-digit code that stands for a service</li>
+	<li>Provider Directory: A storage directory that has the six-digit service code for every possible service<ul>
+	<li>Potential Codes: 598470 - session with a dietitian, 883948 - aerobics exercise session</li>
+	</ul>
+	</li>
+	<li>Record: A formatted output of a service transaction<pre><code class="lang-text"><span class="hljs-selector-tag">MM-DD-YYYY</span> <span class="hljs-selector-tag">HH</span><span class="hljs-selector-pseudo">:MM</span><span class="hljs-selector-pseudo">:SS</span> (Current Date and Time)
+	<span class="hljs-selector-tag">MM-DD-YYYY</span> (Service Date)
+	<span class="hljs-selector-tag">XXXXXXXXX</span> (<span class="hljs-number">9</span>-digit Provider Number)
+	<span class="hljs-selector-tag">XXXXXXXXX</span> (<span class="hljs-number">9</span>-digit Member Number)
+	<span class="hljs-selector-tag">XXXXXX</span> (<span class="hljs-number">6</span>-digit Service Code)
+	*<span class="hljs-selector-tag">Optional</span>* (<span class="hljs-number">100</span> character comments)
+	</code></pre>
+	</li>
+	<li>Disk: A storage drive</li>
+	<li>Service Fees: Fee for services provided by providers </li>
+	<li>Service Form: A form for providers to fill out after a service has been provided that includes: the current date and time, the date the service was provided, member name and number, service code, and fee to be paid</li>
+	<li>Provider Directory: an alphabetically ordered list of service names and their corresponding service codes and fees</li>
+	<li>Main Accounting Procedure: another name for the Data Center backend or automatic server</li>
+	<li>EFT: electronic fund transfer</li>
+	<li>Manager: ChocAn head, in charge of paying providers</li>
+	<li>Interactive Mode: A software state that allows operators to add new members, delete members, and update members.</li>
+	</ul>
+
+</div>
+
+
+<div class="text">
+	<div class="wrapper">
+		<div id="U" class="letter">U</div>
+		<div class="shadow">U</div>
+	</div>
+	<div class="wrapper">
+		<div id="S" class="letter">S</div>
+		<div class="shadow">S</div>
+	</div>
+	<div class="wrapper">
+		<div id="E" class="letter">E</div>
+		<div class="shadow">E</div>
+	</div>
+	<div class="wrapper">
+		<div id=" " class="letter"> </div>
+		<div class="shadow"> </div>
+	</div>
+	<div class="wrapper">
+		<div id="C" class="letter">C</div>
+		<div class="shadow">C</div>
+	</div>
+	<div class="wrapper">
+		<div id="A" class="letter">A</div>
+		<div class="shadow">A</div>
+	</div>
+	<div class="wrapper">
+		<div id="S" class="letter">S</div>
+		<div class="shadow">S</div>
+	</div>
+	<div class="wrapper">
+		<div id="E" class="letter">E</div>
+		<div class="shadow">E</div>
+	</div>
+</div>
+
+<div class="text">
+	<div class="wrapper">
+		<div id="D" class="letter">D</div>
+		<div class="shadow">D</div>
+	</div>
+	<div class="wrapper">
+		<div id="I" class="letter">I</div>
+		<div class="shadow">I</div>
+	</div>
+	<div class="wrapper">
+		<div id="A" class="letter">A</div>
+		<div class="shadow">A</div>
+	</div>
+	<div class="wrapper">
+		<div id="G" class="letter">G</div>
+		<div class="shadow">G</div>
+	</div>
+	<div class="wrapper">
+		<div id="R" class="letter">R</div>
+		<div class="shadow">R</div>
+	</div>
+	<div class="wrapper">
+		<div id="A" class="letter">A</div>
+		<div class="shadow">A</div>
+	</div>
+	<div class="wrapper">
+		<div id="M" class="letter">M</div>
+		<div class="shadow">M</div>
+	</div>
+</div>
+
+
+<img src="../Project2/UseCaseDiagram.png" alt="UML USE CASE">
+
+
+<div class="commits">
+	<h1 class="large rise" style="text-align: center;">Commit History</h1>
+
+	<img src="bitbucket.png" alt="Commit List">
+</div>
+
+
+</body>
+<script>
+    fetch('header.html')
+    .then(response => response.text())
+    .then(html => {
+        document.getElementById('header_table').innerHTML = html;
+    });
+    fetch('task.html')
+    .then(response => response.text())
+    .then(html => {
+        document.getElementById('task_table').innerHTML = html;
+    });
+</script>
+</html>

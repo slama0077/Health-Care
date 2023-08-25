@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Team 7 Project 1</title>
+</head>
+<body>
+<h1 style="text-align: center;">Team 7 Project 1</h1>
+<div id="header_table"></div>
+<br/>
+<br/>
+<div id="task_table"></div>
+<!-- change src to your image -->
+<img src="images/Joseff_UML.png" alt="UML USE CASE">
+
+
+</body>
+<script>
+    fetch('header.html')
+    .then(response => response.text())
+    .then(html => {
+        document.getElementById('header_table').innerHTML = html;
+    });
+    fetch('task.html')
+    .then(response => response.text())
+    .then(html => {
+        document.getElementById('task_table').innerHTML = html;
+    });
+</script>
+</html>
